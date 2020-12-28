@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-color: #1d1d1d;
+}
+nav {
+  background: #181818;
+  width: 60px;
+  min-height: 500px;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav #nav1 li {
+  line-height: 20px;
+  font-size: 20px;
+  padding: 10px;
+  color: white;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+nav #nav1 li:hover {
+  color: rgb(58, 239, 252);
+  cursor: pointer;
+  display: hidden;
+}
+nav #nav1 li:hover .text {
+  left: 0px;
+  padding-bottom: 10px;
+}
+
+.text {
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  text-align: center;
+  position: relative;
+  left: -200px;
+}
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.me {
+  flex: 1;
+  margin-left: 200px;
+}
+#texto {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 5px;
+  color: #888888;
+}
+.me p {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 4.5rem;
+  line-height: 90px;
+  display: inline-block;
+  letter-spacing: 5px;
+}
+.intro {
+  transition: all 1s ease;
+  display: inline-block;
+}
+.bounce {
+  animation-name: bounce;
+  animation-iteration-count: 3;
+  animation-duration: 1s;
+  cursor: pointer;
+}
+.intro:hover {
+  color: rgb(58, 239, 252);
+}
+#text {
+  display: inline-block;
+}
+#contacto {
+  margin-top: 40px;
+  font-family: "Raleway";
+  padding: 10px;
+  font-size: 18px;
+  background: transparent;
+  border: 1px solid rgb(58, 239, 252);
+  color: rgb(58, 239, 252);
+  outline: none;
+  transition: all 0.5s ease;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+#contacto:hover {
+  background: rgb(58, 239, 252);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-10px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+.typing {
+  position: relative;
+}
+.typing::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  right: -4px;
+  height: 90%;
+  border-right: 2px solid white;
+  animation: blink 0.8s infinite ease;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
