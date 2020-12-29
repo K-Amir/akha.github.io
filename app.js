@@ -10,7 +10,7 @@ texto.forEach( letra => {
     })
 });
 
-const bg = document.querySelector(".burguer");
+const bg = document.querySelector(".bg-fa");
 const nav = document.querySelector("nav");
 bg.addEventListener("click" , () => {
     nav.classList.toggle("changepos");

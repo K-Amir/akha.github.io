@@ -183,32 +183,35 @@ main {
   margin: 5px;
 }
 .loader {
-  height: 100vh;
-  width: 100%;
   background: #181818;
+  display: flexbox;
   z-index: 9;
   color: white;
   position: absolute;
   transition: all 2s ease;
-  display: flexbox;
   font-family: "Raleway";
   text-align: center;
   font-size: 40px;
+  height: 100vh;
+  width: 100%;
   animation: loader 3s;
   transform: translateY(100%);
   transform-origin: bottom left;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 .loader .loader-text {
-  margin-top: 30rem;
+  margin-top: 25%;
 }
 .bar-box {
   width: 70%;
   margin: auto;
+  height: 20px;
 }
 .loader .bar {
   border: 2px solid rgb(58, 239, 252);
   width: 0%;
-  margin-top: 40px;
 }
 @keyframes loader {
   0% {

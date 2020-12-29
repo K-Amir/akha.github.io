@@ -4,20 +4,33 @@
   }
 }
 @media (min-width: 0px) and (max-width: 767.98px) {
+  main {
+    flex-direction: column-reverse;
+  }
   .image {
-    display: none;
+    display: flex;
+
+    margin: 0px !important;
+  }
+  .image img {
+    margin-top: 21% !important;
+    text-align: center;
+    margin: auto;
+    width: 60%;
   }
   .me {
-    margin: 5%;
+    min-height: 100px !important;
+    margin: 0px;
+    margin-top: 10%;
   }
 
   .me p {
-    font-size: 2rem;
-    line-height: 45px;
-    letter-spacing: 3px;
+    font-size: 2.5rem;
+    line-height: 40px;
+    letter-spacing: 2px;
   }
   .typing {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .typing::after {
     height: 130% !important;
@@ -42,6 +55,9 @@
   }
   nav #nav1 li .text {
     display: none;
+  }
+  .loader .loader-text {
+    margin-top: 75%;
   }
   .changepos {
     transform: rotate(0deg) !important;
