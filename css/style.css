@@ -91,16 +91,15 @@ main {
 .intro {
   transition: all 1s ease;
   display: inline-block;
+  user-select: none !important;
   animation-name: bounceonappear;
   animation-iteration-count: 3;
   animation-duration: 1s;
-  cursor: pointer;
 }
 .bounce {
   animation-name: bounce;
   animation-iteration-count: 1;
   animation-duration: 1s;
-  cursor: pointer;
 }
 .intro:hover {
   color: rgb(58, 239, 252);

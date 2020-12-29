@@ -72,12 +72,14 @@ const main = document.querySelector("main");
 //Switch para pillar vlue de los iconos e ir cambiando el main
 const home = document.querySelector(".home");
 const contact = document.querySelector(".contact");
+const abilities = document.querySelector(".abilities");
 
 function cambiarvalores(partesMenu){
     switch(partesMenu){
         case "Inicio":
             home.classList.add("make_smaller");
             contact.style.display = "none";
+            abilities.style.display = "none";
             home.style.display = "flex";
             console.log("Inicio");
             break;
@@ -85,6 +87,10 @@ function cambiarvalores(partesMenu){
             console.log("Sobre mi");
             break;
         case "Habilidades":
+            abilities.classList.add("make_smaller");
+            home.style.display = "none";
+            contact.style.display = "none";
+            abilities.style.display = "flex";
             console.log("Habilidades");
             break;
         case "Experiencia":
@@ -93,6 +99,7 @@ function cambiarvalores(partesMenu){
         case "Contacto":
             contact.classList.add("make_smaller");
             home.style.display = "none";
+            abilities.style.display = "none";
             contact.style.display = "flex";
             console.log("Contacto");
             break;
