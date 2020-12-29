@@ -30,4 +30,16 @@ let letter = '';
     setTimeout(type, 250);
 }());
 
+const progressbar = document.querySelector(".bar");
+const percentage = document.querySelector(".percentage");
+var barwidth = 1;
+var increase = setInterval(() => {
+    if(barwidth >= 100){
+        cancelInterval(increase);
+    }
+    barwidth = barwidth + 1;
+    progressbar.style.width = `${barwidth}%`;
+    percentage.innerHTML = barwidth+"%";
+}, 19);
+
 //Switch para pillar vlue de los iconos e ir cambiando el main

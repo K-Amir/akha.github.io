@@ -12,6 +12,7 @@ ul {
 }
 body {
   background-color: #1d1d1d;
+  overflow: hidden;
 }
 nav {
   background: #181818;
@@ -180,4 +181,38 @@ main {
   font-size: 25px;
   color: #515152;
   margin: 5px;
+}
+.loader {
+  height: 100vh;
+  width: 100%;
+  background: #181818;
+  z-index: 9;
+  color: white;
+  position: absolute;
+  transition: all 2s ease;
+  display: flexbox;
+  font-family: "Raleway";
+  text-align: center;
+  font-size: 40px;
+  animation: loader 4s;
+  transform: translateY(100%);
+}
+.loader .loader-text {
+  margin-top: 30rem;
+}
+.loader .bar {
+  border: 2px solid rgb(58, 239, 252);
+  width: 0%;
+  margin-top: 40px;
+}
+@keyframes loader {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
