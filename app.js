@@ -18,7 +18,6 @@ bg.addEventListener("click" , () => {
     
 
 
-
 const texts = ['DESARROLLADOR WEB.','PROGRAMADOR.','ESTUDIANTE.'];
 let count = 0;
 let index = 0;
@@ -44,13 +43,58 @@ const percentage = document.querySelector(".percentage");
 var barwidth = 1;
 var increase = setInterval(() => {
     if(barwidth >= 100){
-        cancelInterval(increase);
+        return 0;
     }
     barwidth = barwidth + 1;
     progressbar.style.width = `${barwidth}%`;
     if(barwidth % 5 == 0){
         percentage.innerHTML = barwidth+" % ";
     }
-}, 15);
+}, 14);
 
+
+const icono = document.querySelectorAll(".icono");
+icono.forEach(icono => {
+    icono.addEventListener("click" , ()=> {
+        cambiarvalores(icono.innerText);
+    });
+})
+
+const contacto = document.querySelector("#contacto");
+contacto.addEventListener("click", ()=> {
+    contact.classList.add("make_smaller");
+    home.style.display = "none";
+    contact.style.display = "flex";
+    console.log("Contacto");
+});
+
+const main = document.querySelector("main");
 //Switch para pillar vlue de los iconos e ir cambiando el main
+const home = document.querySelector(".home");
+const contact = document.querySelector(".contact");
+
+function cambiarvalores(partesMenu){
+    switch(partesMenu){
+        case "Inicio":
+            home.classList.add("make_smaller");
+            contact.style.display = "none";
+            home.style.display = "flex";
+            console.log("Inicio");
+            break;
+        case "Sobre mi":
+            console.log("Sobre mi");
+            break;
+        case "Habilidades":
+            console.log("Habilidades");
+            break;
+        case "Experiencia":
+            console.log("Experiencia");
+            break;
+        case "Contacto":
+            contact.classList.add("make_smaller");
+            home.style.display = "none";
+            contact.style.display = "flex";
+            console.log("Contacto");
+            break;
+    }
+}

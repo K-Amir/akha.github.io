@@ -83,13 +83,22 @@ main {
   letter-spacing: 5px;
   font-weight: bold;
 }
+.description {
+  font-size: 1rem;
+  color: white;
+  font-family: "Raleway";
+}
 .intro {
   transition: all 1s ease;
   display: inline-block;
+  animation-name: bounceonappear;
+  animation-iteration-count: 3;
+  animation-duration: 1s;
+  cursor: pointer;
 }
 .bounce {
   animation-name: bounce;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   animation-duration: 1s;
   cursor: pointer;
 }
@@ -117,6 +126,29 @@ main {
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
+@keyframes bounceonappear {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-10px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-4px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
 @keyframes bounce {
   0% {
     transform: scale(1, 1) translateY(0);
@@ -131,7 +163,7 @@ main {
     transform: scale(1.05, 0.95) translateY(0);
   }
   57% {
-    transform: scale(1, 1) translateY(-7px);
+    transform: scale(1, 1) translateY(-4px);
   }
   64% {
     transform: scale(1, 1) translateY(0);
@@ -194,9 +226,11 @@ main {
   font-size: 40px;
   height: 100vh;
   width: 100%;
+
   animation: loader 3s;
-  transform: translateY(100%);
-  transform-origin: bottom left;
+  transform: translateX(0px);
+  animation-fill-mode: forwards;
+
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -212,15 +246,120 @@ main {
 .loader .bar {
   border: 2px solid rgb(58, 239, 252);
   width: 0%;
+  margin: auto;
 }
 @keyframes loader {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(0px);
+    transform: scale(1.6);
   }
   50% {
-    transform: rotate(0deg);
+    transform: translateX(0px);
   }
   100% {
-    transform: rotate(90deg);
+    transform: translateX(100%);
   }
+}
+
+.make_smaller {
+  animation: smaller 1s;
+}
+@keyframes smaller {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.form {
+  width: 600px;
+}
+#name,
+#email {
+  border: none;
+  float: left;
+  padding: 10px;
+  width: 46.5%;
+  margin-top: 50px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2b2b2b;
+  transition: border-bottom 0.75s ease;
+}
+#subject {
+  width: 95%;
+  padding: 10px;
+  border-bottom: 2px solid #2b2b2b;
+  transition: border-bottom 0.75s ease;
+}
+#subject:focus,
+#email:focus,
+#name:focus {
+  border-bottom: 2px solid rgb(58, 239, 252);
+}
+
+#textarea {
+  margin-top: 15px;
+  border: none;
+  background: #2b2b2b;
+  font-family: "Oswald";
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  width: 95.5%;
+  padding: 10px;
+  outline: none;
+  color: #888888;
+  resize: vertical;
+  border-bottom: 2px solid #2b2b2b;
+  transition: border-bottom 0.75s ease;
+}
+.form input {
+  outline: none;
+  font-size: 1.2rem;
+  background: #2b2b2b;
+  border: none;
+  color: #888888;
+  font-family: "Oswald";
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #2b2b2b;
+  transition: border-bottom 0.75s ease;
+}
+#textarea:focus {
+  border-bottom: 2px solid rgb(58, 239, 252);
+}
+.form input:focus {
+  border-bottom: 2px solid rgb(58, 239, 252);
+}
+#boton {
+  margin-top: 20px;
+  font-family: "Raleway";
+  padding: 5px;
+  font-size: 13px;
+  border-radius: 2px;
+  background: transparent;
+  border: 1px solid rgb(58, 239, 252);
+  color: rgb(58, 239, 252);
+  outline: none;
+  transition: all 0.5s ease;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#boton:hover {
+  background: rgb(58, 239, 252);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.contact .me .intro {
+  color: rgb(58, 239, 252);
+}
+.contact .me {
+  flex: 2;
+}
+.contact .image {
+  flex: 2;
+  height: 100vh;
+  margin-right: 0px !important;
 }
