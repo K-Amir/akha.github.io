@@ -39,7 +39,9 @@ var increase = setInterval(() => {
     }
     barwidth = barwidth + 1;
     progressbar.style.width = `${barwidth}%`;
-    percentage.innerHTML = barwidth+"%";
-}, 19);
+    if(barwidth % 5 == 0){
+        percentage.innerHTML = barwidth+" % ";
+    }
+}, 15);
 
 //Switch para pillar vlue de los iconos e ir cambiando el main
