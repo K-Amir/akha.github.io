@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "mifuente";
+  src: url(../font/coolvetica\ rg.ttf);
+}
 ul {
   list-style: none;
 }
@@ -53,8 +57,16 @@ main {
   align-items: center;
 }
 .me {
-  flex: 1;
-  margin-left: 200px;
+  margin-left: 10%;
+  flex: 3;
+}
+.image {
+  flex: 2;
+  margin-right: 10%;
+}
+#destacar {
+  color: rgb(58, 174, 252);
+  text-shadow: -5px -1px 0px rgb(255, 255, 255);
 }
 #texto {
   font-family: "Raleway", sans-serif;
@@ -63,11 +75,12 @@ main {
 }
 .me p {
   color: white;
-  font-family: "Bebas Neue", cursive;
-  font-size: 4.5rem;
-  line-height: 90px;
+  font-family: "mifuente", sans-serif;
+  font-size: 4rem;
+  line-height: 80px;
   display: inline-block;
   letter-spacing: 5px;
+  font-weight: bold;
 }
 .intro {
   transition: all 1s ease;
@@ -146,4 +159,25 @@ main {
   100% {
     opacity: 1;
   }
+}
+.tag {
+  position: absolute;
+  font-family: "Tangerine", cursive;
+  font-size: 25px;
+  color: #515152;
+  top: 2%;
+  left: 7%;
+}
+#tag2 {
+  top: 95% !important;
+}
+#tag3 {
+  top: 90% !important;
+  left: 10%;
+}
+.huno {
+  font-family: "Tangerine", cursive;
+  font-size: 25px;
+  color: #515152;
+  margin: 5px;
 }
