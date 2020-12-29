@@ -194,11 +194,16 @@ main {
   font-family: "Raleway";
   text-align: center;
   font-size: 40px;
-  animation: loader 4s;
+  animation: loader 3s;
   transform: translateY(100%);
+  transform-origin: bottom left;
 }
 .loader .loader-text {
   margin-top: 30rem;
+}
+.bar-box {
+  width: 70%;
+  margin: auto;
 }
 .loader .bar {
   border: 2px solid rgb(58, 239, 252);
@@ -207,12 +212,12 @@ main {
 }
 @keyframes loader {
   0% {
-    transform: translateY(0%);
+    transform: rotate(0deg);
   }
   50% {
-    transform: translateY(0px);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translateY(100%);
+    transform: rotate(90deg);
   }
 }
