@@ -10,6 +10,15 @@ texto.forEach( letra => {
     })
 });
 
+const bg = document.querySelector(".burguer");
+const nav = document.querySelector("nav");
+bg.addEventListener("click" , () => {
+    nav.classList.toggle("changepos");
+});
+    
+
+
+
 const texts = ['DESARROLLADOR WEB.','PROGRAMADOR.','ESTUDIANTE.'];
 let count = 0;
 let index = 0;
