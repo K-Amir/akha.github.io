@@ -52,6 +52,30 @@ var increase = setInterval(() => {
     }
 }, 14);
 
+function loadSkills(){
+    const progressBara = document.querySelectorAll(".progress-bar");
+    progressBara.forEach(bara => {
+        var widthskill = 1;
+        var maximo = parseInt(bara.innerText);
+        var increase = setInterval(()=> {
+            if(widthskill >= maximo-1){
+                clearInterval(increase);
+                
+            }
+            widthskill = widthskill + 1;
+            bara.style.width = widthskill+"%";
+            
+        }, 12);
+    });
+
+}
+function removeSkills(){
+    const progressBara = document.querySelectorAll(".progress-bar");
+    progressBara.forEach(bara => {
+        bara.style.width = "0%";
+    });
+}
+
 
 const icono = document.querySelectorAll(".icono");
 icono.forEach(icono => {
@@ -77,6 +101,7 @@ const abilities = document.querySelector(".abilities");
 function cambiarvalores(partesMenu){
     switch(partesMenu){
         case "Inicio":
+            removeSkills();
             home.classList.add("make_smaller");
             contact.style.display = "none";
             abilities.style.display = "none";
@@ -84,9 +109,11 @@ function cambiarvalores(partesMenu){
             console.log("Inicio");
             break;
         case "Sobre mi":
+            removeSkills();
             console.log("Sobre mi");
             break;
         case "Habilidades":
+            loadSkills();
             abilities.classList.add("make_smaller");
             home.style.display = "none";
             contact.style.display = "none";
@@ -94,9 +121,11 @@ function cambiarvalores(partesMenu){
             console.log("Habilidades");
             break;
         case "Experiencia":
+            removeSkills();
             console.log("Experiencia");
             break;
         case "Contacto":
+            removeSkills();
             contact.classList.add("make_smaller");
             home.style.display = "none";
             abilities.style.display = "none";
@@ -105,3 +134,4 @@ function cambiarvalores(partesMenu){
             break;
     }
 }
+

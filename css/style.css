@@ -89,7 +89,8 @@ main {
   font-family: "Raleway";
 }
 .intro {
-  transition: all 1s ease;
+  transition: animation 1s ease;
+  transition: color 0.2s ease;
   display: inline-block;
   user-select: none !important;
   animation-name: bounceonappear;
@@ -361,4 +362,86 @@ main {
   flex: 2;
   height: 100vh;
   margin-right: 0px !important;
+}
+
+.abilities .me p {
+  color: rgb(58, 239, 252);
+}
+.margin-top {
+  margin-top: 20px;
+}
+.abilities .me {
+  flex: 2;
+}
+.abilities .image {
+  flex: 2;
+  margin-right: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.box {
+  width: 100%;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: rgb(46, 46, 46);
+  color: #181818;
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.progress {
+  width: 100%;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  margin: 18px 0px;
+  height: 28px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  position: relative;
+  transition: all 2s ease-out;
+}
+.html-color {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 188, 12, 1) 0%,
+    rgba(244, 86, 0, 1) 100%
+  );
+}
+.css-color {
+  background: linear-gradient(
+    90deg,
+    rgba(12, 255, 241, 1) 0%,
+    rgba(8, 0, 244, 1) 100%
+  );
+}
+.js-color {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 227, 0, 1) 0%,
+    rgba(244, 255, 0, 1) 100%
+  );
+}
+.java-color {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 94, 0, 1) 0%,
+    rgba(255, 0, 0, 0.9467496471244747) 100%
+  );
+}
+.sql-color {
+  background: linear-gradient(
+    90deg,
+    rgba(87, 167, 237, 1) 0%,
+    rgba(83, 232, 156, 1) 100%
+  );
+}
+.progress-bar span {
+  position: absolute;
+  top: 0%;
+  right: 2%;
 }
