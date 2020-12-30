@@ -18,7 +18,7 @@ bg.addEventListener("click" , () => {
     
 
 
-const texts = ['DESARROLLADOR WEB.','PROGRAMADOR.','ESTUDIANTE.'];
+const texts = ['WEB DEV.','PROGRAMADOR.','ESTUDIANTE.'];
 let count = 0;
 let index = 0;
 let currentText = '';
@@ -111,6 +111,8 @@ const lightcode = document.querySelector(".light-code");
 const lightwork = document.querySelector("#light-work");
 const lightcontact = document.querySelector("#light-contact");
 lighthome.style.color = "rgb(58, 239, 252)";
+
+
 
 function cambiarvalores(partesMenu){
     switch(partesMenu){

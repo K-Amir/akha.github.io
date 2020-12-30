@@ -262,14 +262,24 @@ main {
 }
 
 .make_smaller {
-  animation: smaller 1s;
+  animation: smaller 1s ease;
 }
 @keyframes smaller {
-  from {
+  /*from {
     transform: translateX(100%);
   }
   to {
     transform: translateX(0px);
+  }
+  */
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 .form {
@@ -444,4 +454,13 @@ main {
   position: absolute;
   top: 0%;
   right: 2%;
+}
+.about-me .me p {
+  color: rgb(58, 239, 252);
+}
+.about-me .me {
+  flex: 2;
+}
+.about-me .image {
+  flex: 2;
 }
