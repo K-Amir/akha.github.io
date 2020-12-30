@@ -90,6 +90,11 @@ contacto.addEventListener("click", ()=> {
     home.style.display = "none";
     contact.style.display = "flex";
     console.log("Contacto");
+    lightme.style.color = "white";
+    lightcode.style.color = "white";
+    lightwork.style.color = "white";
+    lightcontact.style.color = "rgb(58, 239, 252)";
+    lighthome.style.color = "white";
 });
 
 const main = document.querySelector("main");
@@ -97,6 +102,15 @@ const main = document.querySelector("main");
 const home = document.querySelector(".home");
 const contact = document.querySelector(".contact");
 const abilities = document.querySelector(".abilities");
+const about_me = document.querySelector(".about-me");
+const work = document.querySelector(".work");
+
+const lighthome = document.querySelector("#light-home");
+const lightme = document.querySelector("#light-me");
+const lightcode = document.querySelector(".light-code");
+const lightwork = document.querySelector("#light-work");
+const lightcontact = document.querySelector("#light-contact");
+lighthome.style.color = "rgb(58, 239, 252)";
 
 function cambiarvalores(partesMenu){
     switch(partesMenu){
@@ -105,23 +119,60 @@ function cambiarvalores(partesMenu){
             home.classList.add("make_smaller");
             contact.style.display = "none";
             abilities.style.display = "none";
+            about_me.style.display = "none";
+            work.style.display = "none";
             home.style.display = "flex";
             console.log("Inicio");
+            lightme.style.color = "white";
+            lightcode.style.color = "white";
+            lightwork.style.color = "white";
+            lightcontact.style.color = "white";
+            lighthome.style.color = "rgb(58, 239, 252)";
             break;
         case "Sobre mi":
             removeSkills();
+            about_me.classList.add("make_smaller");
+            contact.style.display = "none";
+            home.style.display = "none";
+            abilities.style.display = "none";
+            work.style.display = "none";
+            about_me.style.display = "flex";
             console.log("Sobre mi");
+            lightme.style.color = "rgb(58, 239, 252)";
+            lightcode.style.color = "white";
+            lightwork.style.color = "white";
+            lightcontact.style.color = "white";
+            lighthome.style.color = "white";
             break;
         case "Habilidades":
             loadSkills();
             abilities.classList.add("make_smaller");
             home.style.display = "none";
             contact.style.display = "none";
+            about_me.style.display = "none";
+            work.style.display = "none";
             abilities.style.display = "flex";
+            lighthome.style.color = "white";
             console.log("Habilidades");
+            lightme.style.color = "white";
+            lightcode.style.color = "rgb(58, 239, 252)";
+            lightwork.style.color = "white";
+            lightcontact.style.color = "white";
+            lighthome.style.color = "white";
             break;
         case "Experiencia":
             removeSkills();
+            work.classList.add("make_smaller");
+            work.style.display = "flex";
+            home.style.display = "none";
+            contact.style.display = "none";
+            about_me.style.display = "none";
+            abilities.style.display = "none";
+            lightme.style.color = "white";
+            lightcode.style.color = "white";
+            lightwork.style.color = "rgb(58, 239, 252)";
+            lightcontact.style.color = "white";
+            lighthome.style.color = "white";
             console.log("Experiencia");
             break;
         case "Contacto":
@@ -129,7 +180,14 @@ function cambiarvalores(partesMenu){
             contact.classList.add("make_smaller");
             home.style.display = "none";
             abilities.style.display = "none";
+            about_me.style.display = "none";
+            work.style.display = "none";
             contact.style.display = "flex";
+            lightme.style.color = "white";
+            lightcode.style.color = "white";
+            lightwork.style.color = "white";
+            lightcontact.style.color = "rgb(58, 239, 252)";
+            lighthome.style.color = "white";
             console.log("Contacto");
             break;
     }
