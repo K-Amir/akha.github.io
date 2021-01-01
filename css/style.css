@@ -21,15 +21,22 @@ nav {
   height: 100%;
   position: fixed;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  z-index: 12;
+}
+#imagen {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 13;
 }
 nav #nav1 li {
   line-height: 20px;
   font-size: 20px;
   padding: 10px;
-  color: white;
+  color: rgb(218, 218, 218);
   transition: all 0.5s ease;
   text-align: center;
 }
@@ -41,6 +48,20 @@ nav #nav1 li:hover {
 nav #nav1 li:hover .text {
   left: 0px;
   padding-bottom: 10px;
+}
+nav #social {
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  margin-left: 19px;
+}
+nav #social li {
+  font-size: 15px;
+  padding: 5px;
+  line-height: 10px;
+}
+nav #social .text {
+  font-size: 10px !important;
 }
 
 .text {
@@ -217,7 +238,7 @@ main {
 .loader {
   background: #181818;
   display: flexbox;
-  z-index: 9;
+  z-index: 15;
   color: white;
   position: absolute;
   transition: all 2s ease;
@@ -462,4 +483,75 @@ main {
 }
 .about-me .image {
   flex: 2;
+  margin-right: 0%;
+}
+.work #me {
+  margin: none !important;
+  width: 100%;
+  background: #1d1d1d;
+  height: 100vh;
+  display: flex;
+  z-index: 8;
+  justify-content: space-around;
+}
+.work #me .box1 {
+  width: 100%;
+  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  flex: 1;
+}
+.box1:nth-of-type(1) {
+  background-image: url(https://free4kwallpapers.com/uploads/originals/2020/04/30/retro-mustang-wallpaper.jpg);
+  background-position: center;
+}
+.box1:nth-of-type(2) {
+  background-image: url(https://wallpaperaccess.com/full/2439844.jpg);
+  background-position: center;
+}
+.box1:nth-of-type(3) {
+  background-image: url(https://images.wallpapersden.com/image/download/greedfall-4k-8k-poster_a2ppZ2qUmZqaraWkpJRma2ttrWdnZ2k.jpg);
+  background-position: center;
+}
+.box1:nth-of-type(4) {
+  background-image: url(https://wallpapercave.com/wp/wp3860710.jpg);
+  background-position: center;
+}
+.box1:nth-of-type(5) {
+  background-image: url(https://data.1freewallpapers.com/download/osaka-1920x1200.jpg);
+  background-position: center;
+}
+.popup {
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+}
+.scale1 {
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.popup p {
+  display: inline-block;
+  text-align: center;
+  font-family: "Oswald";
+  font-size: 1.5rem;
+}
+.barra {
+  background: rgb(58, 239, 252);
+  height: 3px;
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+}
+.changewidth {
+  width: 80%;
 }
