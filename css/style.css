@@ -249,13 +249,14 @@ main {
   width: 100%;
   pointer-events: none;
   animation: loader 3s;
-  transform: translateX(0px);
   animation-fill-mode: forwards;
   align-content: center;
   justify-content: center;
   align-items: center;
 }
-
+.cosa {
+  width: 100%;
+}
 .bar-box {
   width: 70%;
   margin: auto;
