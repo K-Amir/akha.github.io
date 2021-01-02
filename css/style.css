@@ -237,7 +237,7 @@ main {
 }
 .loader {
   background: #181818;
-  display: flexbox;
+  display: flex;
   z-index: 15;
   color: white;
   position: absolute;
@@ -251,14 +251,11 @@ main {
   animation: loader 3s;
   transform: translateX(0px);
   animation-fill-mode: forwards;
-
   align-content: center;
   justify-content: center;
   align-items: center;
 }
-.loader .loader-text {
-  margin-top: 25%;
-}
+
 .bar-box {
   width: 70%;
   margin: auto;
