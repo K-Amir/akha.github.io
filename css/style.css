@@ -500,6 +500,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   transition: all 0.5s ease-in-out;
   flex: 1;
 }
@@ -534,12 +535,22 @@ main {
   height: 150px;
   transform: scale(0);
   transition: all 0.5s ease-in-out;
+  z-index: 4;
 }
 .scale1 {
   transform: scale(1);
   cursor: pointer;
 }
-
+.popup2 {
+  background: #2b2b2b;
+  border-radius: 100%;
+  width: 175px;
+  height: 175px;
+  transform: scale(0);
+  transition: all 0.6s ease-in-out;
+  position: absolute;
+  z-index: 3;
+}
 .popup p {
   display: inline-block;
   text-align: center;
@@ -547,11 +558,22 @@ main {
   font-size: 1.5rem;
 }
 .barra {
-  background: rgb(58, 239, 252);
+  background: #2b2b2b;
   height: 3px;
   width: 0%;
   transition: width 1.5s ease-in-out;
 }
 .changewidth {
   width: 80%;
+}
+.scale2 {
+  transform: scale(1);
+  cursor: pointer;
+}
+.popup:hover {
+  background: #2b2b2b;
+  color: white;
+}
+.popup:hover .popup2 {
+  background: white;
 }

@@ -203,20 +203,21 @@ boxes.forEach((box,index) => {
     box.addEventListener("mouseover", ()=>{
         box.style.opacity = "1";
         box.children[0].classList.add("scale1");
-        barra[index].classList.add("changewidth");
+        
         console.log(barra[index]);
         box.style.flex = "7";
+        box.children[1].classList.add("scale2");
         
     });
 });
 
 boxes.forEach((box,index) => {
-
     box.addEventListener("mouseout", ()=>{
         box.style.opacity = "0.3";
         box.children[0].classList.remove("scale1");
         barra[index].classList.remove("changewidth");
         box.style.flex = "1";
+        box.children[1].classList.remove("scale2");
        
     });
 });
